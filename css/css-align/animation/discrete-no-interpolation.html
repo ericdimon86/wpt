@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<meta name=timeout content=long>
 <link rel=author href="mailto:jarhar@chromium.org">
 <link rel=help href="https://github.com/w3c/csswg-drafts/issues/4441">
 <script src="/resources/testharness.js"></script>
@@ -9,44 +8,32 @@
 <body>
 <script>
 test_no_interpolation({
-  property: 'text-decoration-line',
+  property: 'align-content',
   from: 'initial',
-  to: 'underline'
+  to: 'baseline'
 });
 
 test_no_interpolation({
-  property: 'text-decoration-style',
+  property: 'align-items',
   from: 'initial',
-  to: 'dashed'
+  to: 'baseline'
 });
 
 test_no_interpolation({
-  property: 'text-decoration-thickness',
+  property: 'align-self',
   from: 'initial',
-  to: '123px'
+  to: 'baseline'
 });
 
 test_no_interpolation({
-  property: 'text-emphasis-position',
+  property: 'justify-items',
   from: 'initial',
-  to: 'under right'
+  to: 'baseline'
 });
 
 test_no_interpolation({
-  property: 'text-emphasis-style',
+  property: 'justify-self',
   from: 'initial',
-  to: 'dot'
-});
-
-test_no_interpolation({
-  property: 'text-underline-position',
-  from: 'initial',
-  to: 'under'
-});
-
-test_no_interpolation({
-  property: 'line-break',
-  from: 'initial',
-  to: 'anywhere'
+  to: 'baseline'
 });
 </script>

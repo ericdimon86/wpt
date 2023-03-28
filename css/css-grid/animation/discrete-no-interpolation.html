@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<meta name=timeout content=long>
 <link rel=author href="mailto:jarhar@chromium.org">
 <link rel=help href="https://github.com/w3c/csswg-drafts/issues/4441">
 <script src="/resources/testharness.js"></script>
@@ -9,44 +8,50 @@
 <body>
 <script>
 test_no_interpolation({
-  property: 'text-decoration-line',
-  from: 'initial',
-  to: 'underline'
-});
-
-test_no_interpolation({
-  property: 'text-decoration-style',
-  from: 'initial',
-  to: 'dashed'
-});
-
-test_no_interpolation({
-  property: 'text-decoration-thickness',
+  property: 'grid-auto-columns',
   from: 'initial',
   to: '123px'
 });
 
 test_no_interpolation({
-  property: 'text-emphasis-position',
+  property: 'grid-auto-flow',
   from: 'initial',
-  to: 'under right'
+  to: 'column'
 });
 
 test_no_interpolation({
-  property: 'text-emphasis-style',
+  property: 'grid-auto-rows',
   from: 'initial',
-  to: 'dot'
+  to: '123px'
 });
 
 test_no_interpolation({
-  property: 'text-underline-position',
+  property: 'grid-column-end',
   from: 'initial',
-  to: 'under'
+  to: '123'
 });
 
 test_no_interpolation({
-  property: 'line-break',
+  property: 'grid-column-start',
   from: 'initial',
-  to: 'anywhere'
+  to: '123'
+});
+
+test_no_interpolation({
+  property: 'grid-row-end',
+  from: 'initial',
+  to: '123'
+});
+
+test_no_interpolation({
+  property: 'grid-row-start',
+  from: 'initial',
+  to: '123'
+});
+
+test_no_interpolation({
+  property: 'grid-template-areas',
+  from: 'initial',
+  to: '"."'
 });
 </script>
