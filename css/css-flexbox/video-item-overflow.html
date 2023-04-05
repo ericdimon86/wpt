@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<link rel="author" title="David Grogan" href="mailto:dgrogan@chromium.org">
+<link rel="help" href="https://crbug.com/1337056">
+<meta name="assert"
+  content="Video item's automatic minimum with is not derived from the flexbox size.">
+
+<script src="/resources/testharness.js"></script>
+<script src="/resources/testharnessreport.js"></script>
+<script src="/resources/check-layout-th.js"></script>
+
+<style>
+  .row {
+    display: flex;
+    width: 200px;
+    height: 200px;
+
+    position: relative;
+    border: 5px solid orange;
+    margin-bottom: 20px;
+  }
+
+  .video {
+    width: 100%;
+    background: DarkTurquoise;
+  }
+
+  .right {
+    width: 100px;
+    flex-shrink: 0;
+    background: Fuchsia;
+  }
+
+</style>
+
+Pass condition: pink rectangle does not overflow orange box.<br>
+Chrome 112 and Safari 16.4 fail. Firefox 111 passes.
+
+<div class="row">
+  <video controls class="video">
+  </video>
+  <div class="right" data-offset-x="100"></div>
+</div>
+
+
+<script>
+  checkLayout('.right');
+</script>
